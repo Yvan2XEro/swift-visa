@@ -1,0 +1,51 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["mongodb"]
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Demand {
+  id               String   @id @default(auto()) @map("_id") @db.ObjectId
+  email            String   @unique
+  lastName         String?
+  firstName        String?
+  gender           String?
+  birthDate        String?
+  birthPlace       String?
+  birthCountry     String?
+  nationality      String?
+  profession       String?
+  phone1           String?
+  phone2           String?
+  homeAddress      String?
+  kindVisa         String?
+  fromEmbassy      Boolean?
+  price            Float?
+  previousStayDate String?
+  entryDate        String?
+  residence        String?
+  duration         Int?
+  depCountry       String?
+  destination      String?
+  subsistenceMean  String?
+  returnGuarantee  String?
+  tripReason       String?
+
+  numDocument          String
+  passportExpireDate   String
+  passportIssueCountry String?
+  passportIssueDate    String?
+
+  token      String?
+  expireLink DateTime?
+  statut     String    @default("en_attente")
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+}

@@ -2,26 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+main{
+    @apply container mx-auto
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+select{
+    @apply block w-full p-2 rounded-lg
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.step_bull{
+    @apply duration-300 w-8 h-8 flex items-center justify-center rounded-full border-solid border-white border-2 mx-2
+}
+.bull_active{
+    @apply bg-slate-300 text-black border-none
+}
+.hidden {
+    display: none;
 }
