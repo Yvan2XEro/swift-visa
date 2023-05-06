@@ -6,9 +6,9 @@ const nextConfig = {
   },
   env: {
     APP_NAME: "Swift VISA",
-    HOST: "http://127.0.0.1:3000",
+    HOST: "http://127.0.0.1:3000/sv",
     DATABASE_URL: "mongodb+srv://tefoye:tefoye2022@cluster0.uwsolat.mongodb.net/Swift_Visa",
-    // DATABASE_URL: "mongodb://192.168.219.170/swift_visa",
+    // DATABASE_URL: "mongodb://admin:password@localhost:27017/sv",
   }
 }
 module.exports = nextConfig

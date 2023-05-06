@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Illustration from "@/assets/images/illustration.jpg";
 import HomeActionButtons from "@/components/HomeActionButtons";
+import NewsList from "@/components/NewsList";
 
 export default function Home() {
   return (
@@ -30,8 +31,8 @@ export default function Home() {
       </section>
       <section className="">
         <h2 className="text-3xl font-bold">Actualitées</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3">
-          <div></div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <NewsList />
         </div>
       </section>
     </main>
