@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
 import { useReactToPrint } from "react-to-print";
 
-export default function page({ params: { id } }: { params: { id: string } }) {
+export default function Page({ params: { id } }: { params: { id: string } }) {
   const docRef = useRef<any>();
   const [demand, setDemand] = useState<Demand>();
   const [loading, setLoading] = useState(true);
