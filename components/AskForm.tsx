@@ -14,7 +14,7 @@ const askShema = yup.object().shape({
     .required()
     .min(6)
     .matches(/^[a-zA-Z0-9]+$/, "Only alphanumeric characters are allowed"),
-  passportExpireDate: yup.date().required(),
+  passportExpireDate: yup.string().required(),
 });
 
 export function AskForm() {

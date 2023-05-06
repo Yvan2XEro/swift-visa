@@ -1,14 +1,14 @@
 version: "3.8"
 services:
-  mongodb:
-    image: mongo
+  postgres:
+    image: postgres
     ports:
-      - 27017:27017
+      - 5433:5432
     volumes:
-      - mongodb_data:/data/db
+      - postgres_data:/var/lib/postgresql/data
     environment:
-      - MONGO_INITDB_DATABASE=sv
-      - MONGO_INITDB_ROOT_USERNAME=admin
-      - MONGO_INITDB_ROOT_PASSWORD=password
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=sv
 volumes:
-  mongodb_data:
+  postgres_data:

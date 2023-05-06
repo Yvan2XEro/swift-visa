@@ -5,16 +5,16 @@ export async function sendEmail(from: string, to: string, subject: string, html:
         const transporter = nodemailer.createTransport({
             service: "gmail",
             auth: {
-                user: process.env.EMAIL,
-                pass: process.env.PASSWORD,
+                user: "swift.visa237@gmail.com",//process.env.EMAIL,
+                pass: process.env.GMAIL_PASSWORD,
             }
         });
 
         const mailOptions = {
-            from,
+            from: process.env.NOREPLY_EMAIL,
             to,
             subject,
-            html,
+            html
         };
 
         await transporter.sendMail(mailOptions);
