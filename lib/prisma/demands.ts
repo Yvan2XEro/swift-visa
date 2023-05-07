@@ -21,6 +21,16 @@ export async function findDemand(id: any) {
         return { error }
     }
 }
+export async function findDemandByEmail(email: any) {
+    try {
+        const demandFromDb = await prisma.demand.findUnique({
+            where: { email }
+        });
+        return { demand: demandFromDb as Demand }
+    } catch (error) {
+        return { error }
+    }
+}
 export async function updateDemand(id: any, data: Demand) {
     try {
         const demandFromDb = await prisma.demand.update({

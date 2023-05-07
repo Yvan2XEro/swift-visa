@@ -49,6 +49,16 @@ export function AskForm() {
     setLoading(true);
     seterror("");
     try {
+      const verifResponse = await fetch("/api/demands/check-email-exists", {
+        method: "POST",
+        body: JSON.stringify({ email }),
+      });
+
+      if (verifResponse.status === 200) {
+        return seterror(
+          "Email already in use! You can check your demand status using your demand ID"
+        );
+      }
       const response = await fetch("/api/demands", {
         method: "POST",
         body: JSON.stringify({ email, numDocument, passportExpireDate }),
@@ -70,7 +80,9 @@ export function AskForm() {
         <h2 className="text-xl">DEMANDER UN E-VISA</h2>
       </Modal.Header>
       <Modal.Body>
-        {error.length > 0 && <small className="text-red-600">{error}</small>}
+        {error.length > 0 && (
+          <small className="text-red-600 text-sm">{error}</small>
+        )}
         <Input
           label="Email:"
           {...register("email")}
