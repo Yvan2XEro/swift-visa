@@ -14,8 +14,10 @@ export async function POST(request: Request) {
         const d = await updateDemand(demandeVisa?.id, { ...demandeVisa, id: undefined, token, expireLink: getExpirationDateTime(token) })
 
         const link = `${process.env.HOST || request.url.split("/api")[0]}/demands-check/${token}`
-        sendEmail(`&${process.env.NOREPLY_EMAIL}`, demandeVisa.email, "Completion of the VISA application request", demandLinkMail(link, d?.demand?.id))
-        return NextResponse.json(d, { status: 200 })
+        const response = await sendEmail(`&${process.env.NOREPLY_EMAIL}`, demandeVisa.email, "Completion of the VISA application request", demandLinkMail(link, d?.demand?.id))
+        if (response?.accepted)
+            return NextResponse.json(d, { status: 200 })
+        return NextResponse.json({ message: response?.response || "Unable to send email" }, { status: 501 })
     } catch (error: any) {
         console.log(error)
         return NextResponse.json({ message: error.toString() }, { status: 500 })
