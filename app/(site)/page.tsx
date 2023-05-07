@@ -30,7 +30,9 @@ export default function Home() {
         </div>
       </section>
       <section className="container">
-        <h2 className="text-3xl font-bold">Actualitées</h2>
+        <h2 className="text-3xl font-bold text-center md:text-left">
+          Actualitées
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           <NewsList />
         </div>
