@@ -6,7 +6,7 @@ const nextConfig = {
   },
   env: {
     APP_NAME: "Swift VISA",
-    // HOST: "http://127.0.0.1:3000",
+    HOST: "https://swift-visa.vercel.app",
     // DATABASE_URL: "mongodb+srv://tefoye:tefoye2022@cluster0.uwsolat.mongodb.net/Swift_Visa",
     // DATABASE_URL: "mongodb://admin:password@localhost:27017/sv",
     NOREPLY_EMAIL: "swift.visa237@gmail.com",
