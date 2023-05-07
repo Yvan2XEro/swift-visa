@@ -6,7 +6,7 @@ import NewsList from "@/components/NewsList";
 export default function Home() {
   return (
     <main>
-      <section className=" py-16">
+      <section className="min-h-screen py-16">
         <div className=" px-4">
           <div className="flex flex-col lg:flex-row items-center justify-center">
             <div className="lg:w-1/2 lg:pr-8">
