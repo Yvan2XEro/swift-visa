@@ -1,9 +1,6 @@
 "use client";
 import React, { ReactNode, useReducer, useState } from "react";
 import { Button, Input, Loading, Modal } from "@nextui-org/react";
-import { createDemand } from "@/lib/prisma/demands";
-import { useFetch } from "usehooks-ts";
-import { IoMdCheckboxOutline } from "react-icons/io";
 import { VerfiyStatusForm } from "./VerfiyStatusForm";
 import { AskForm } from "./AskForm";
 
