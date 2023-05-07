@@ -47,7 +47,7 @@ model Demand {
 
   token      String?
   expireLink DateTime?
-  statut     String    @default("en_attente")
+  statut     String    @default("in progress")
   createdAt  DateTime  @default(now())
   updatedAt  DateTime  @updatedAt
 }

@@ -32,7 +32,7 @@ export function PassportForm() {
     mode: "onChange",
   });
   async function submit(data: Partial<Demand>) {
-    setFormValues(data);
+    setFormValues({ ...data, statut: "waiting" });
 
     try {
       const response = await fetch(`/api/demands/${formValues.id}`, {
