@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDemandForm } from "@/contexts/demand-form";
+import { notFound } from "next/navigation";
 
 export default function DemandForm({
   id,
@@ -14,8 +15,9 @@ export default function DemandForm({
     (async () => {
       const response = await fetch(`/api/demands/${id}`);
       if (response.ok) {
-        setFormValues({ ...(await response.json()) });
+        return setFormValues({ ...(await response.json()) });
       }
+      notFound();
     })();
   }, [id]);
   const [idFromToken, setidFromToken] = useState<any>();
