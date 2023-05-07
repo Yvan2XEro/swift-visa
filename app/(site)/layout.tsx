@@ -4,10 +4,6 @@ import Footer from "@/components/Footer";
 import { PropsWithChildren } from "react";
 import { Metadata } from "next";
 
-const metadata: Metadata = {
-  title: "SWIFT VISA Cameroun",
-};
-
 export default function layout({ children }: PropsWithChildren) {
   return (
     <>
