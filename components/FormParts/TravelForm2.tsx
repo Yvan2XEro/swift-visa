@@ -70,9 +70,9 @@ export function TravelForm2() {
           <span className="text-sm block mb-1">Reason for the trip:</span>
           <select {...register("tripReason")}>
             <option>select...</option>
-            {countries.map((c) => (
-              <option key={c.name} value={c.name}>
-                {c.name}
+            {tripReasons.map((c) => (
+              <option key={c} value={c}>
+                {c}
               </option>
             ))}
           </select>
@@ -85,3 +85,18 @@ export function TravelForm2() {
     </form>
   );
 }
+
+const tripReasons = [
+  "Business",
+  "Tourism",
+  "Health",
+  "School",
+  "Transit",
+  "Official",
+  "visit",
+  "Internship",
+  "Conference",
+  "Mortal",
+  "remains",
+  "Colloques",
+];
