@@ -75,7 +75,7 @@ export function PersonalInfosForm1() {
           <span className="text-sm block mb-1">Country of birth:</span>
           <select {...register("birthCountry")}>
             <option>select...</option>
-            {countries.map((c) => (
+            {[{ name: "Cameroon" }, ...countries].map((c) => (
               <option key={c.name} value={c.name}>
                 {c.name}
               </option>
