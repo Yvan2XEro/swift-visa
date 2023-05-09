@@ -31,7 +31,7 @@ export default function Navbar() {
           href="/howitworks"
           as={Link}
         >
-          Comment ca marche
+          How it works?
         </NextNavbar.Link>
         <NextNavbar.Link
           activeColor="error"

@@ -77,7 +77,7 @@ export function AskForm() {
   return (
     <form onSubmit={handleSubmit(submit)}>
       <Modal.Header>
-        <h2 className="text-xl">DEMANDER UN E-VISA</h2>
+        <h2 className="text-xl">APPLY FOR AN E-VISA</h2>
       </Modal.Header>
       <Modal.Body>
         {error.length > 0 && (
@@ -87,38 +87,38 @@ export function AskForm() {
           label="Email:"
           {...register("email")}
           type="email"
-          placeholder="Votre adresse E-Mail"
+          placeholder="Your email address"
         />
         {!!errors.email && (
           <small className="text-red-600">{errors.email.message}</small>
         )}
         <Input
-          label="Confirmer:"
+          label="Confirm:"
           {...register("emailVerif")}
-          placeholder="Confirmer votre adresse e-mail"
+          placeholder="Confirm your email address"
         />
         {!!errors.emailVerif && (
           <small className="text-red-600">{errors.emailVerif.message}</small>
         )}
         <Input
-          label="Numéro de passport:"
+          label="Passport ID:"
           {...register("numDocument", {
             pattern: {
               value: /^[a-z0-9]+$/i,
               message: "Invalid passport number!",
             },
           })}
-          placeholder="Le numero de votre passport"
+          placeholder="Your passport ID"
           required
         />
         {!!errors.numDocument && (
           <small className="text-red-600">{errors.numDocument.message}</small>
         )}
         <Input
-          label="Date d'expiration de votre passport:"
+          label="Passport expiration date:"
           {...register("passportExpireDate")}
           type="date"
-          placeholder="Le numero de votre passport"
+          placeholder="Your passport ID"
           required
         />
         {!!errors.passportExpireDate && (

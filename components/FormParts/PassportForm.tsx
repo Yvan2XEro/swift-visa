@@ -76,7 +76,7 @@ export function PassportForm() {
         <Input
           required
           {...register("passportIssueDate")}
-          label="Date of issue of the passpor"
+          label="Date of issue of the passport"
           type="date"
         />
         {!!errors.passportIssueDate && (

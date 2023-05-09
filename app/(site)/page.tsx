@@ -11,11 +11,10 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row items-center justify-center">
             <div className="lg:w-1/2 lg:pr-8">
               <h1 className="text-4xl font-bold mb-4">
-                Bienvenue sur {process.env.APP_NAME}
+                Welcome on  {process.env.APP_NAME}
               </h1>
               <p className="text-lg mb-6">
-                Obtenez votre visa en ligne rapidement et en toute fiabilité
-                pour vos voyages internationaux.
+                Obtain your e-visa online with accuracy for all your trips in the world.
               </p>
               <HomeActionButtons />
             </div>
@@ -31,7 +30,7 @@ export default function Home() {
       </section>
       <section className="container">
         <h2 className="text-3xl font-bold text-center md:text-left">
-          Actualitées
+          Actualities
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           <NewsList />

@@ -38,7 +38,7 @@ export default function HomeActionButtons() {
           onClick={() => dispatch({ type: "OPEN", payload: <AskForm /> })}
           className="border-red-500 border transition-all hover:-translate-y-[1.1px] hover:scale-105 text-red-500 font-semibold py-3 px-6 rounded-full inline-block"
         >
-          Commencer
+          Start
         </button>
         <button
           onClick={() =>
@@ -46,7 +46,7 @@ export default function HomeActionButtons() {
           }
           className="bg-red-500 transition-all hover:-translate-y-[1.1px] hover:scale-105 text-white font-semibold py-3 px-6 rounded-full inline-block"
         >
-          Suivre votre demande
+          Follow up your request
         </button>
       </div>
 

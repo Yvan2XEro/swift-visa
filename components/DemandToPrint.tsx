@@ -44,7 +44,7 @@ export default function DemandToPrint({ demand }: { demand: Demand }) {
             <td>{demand?.birthCountry}</td>
           </tr>
           <tr>
-            <th className="text-left p-2">Country of nationality:</th>
+            <th className="text-left p-2">Citizenship:</th>
             <td>{demand?.nationality}</td>
           </tr>
           <tr>

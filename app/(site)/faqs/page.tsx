@@ -11,73 +11,62 @@ export default function page() {
             <details className="p-1 border-b border-gray-300">
               <summary className="cursor-pointer outline-none focus:outline-none">
                 <h3 className="text-xl font-semibold text-gray-700">
-                  Q: Quels documents sont nécessaires pour obtenir un e-Visa ?
+                  Q: What documents are needed to obtain an e-Visa?
                 </h3>
               </summary>
               <p className="text-gray-600 mt-2">
-                A: Les documents requis peuvent varier en fonction du pays pour
-                lequel vous demandez un e-Visa. En général, vous aurez besoin
-                d&apos;un passeport valide, d&apos;une photo d&apos;identité
-                récente, d&apos;une adresse e-mail valide et éventuellement
-                d&apos;autres documents spécifiques au pays de destination.
+              A: The documents required may vary depending on the country for which you are
+              applying for an e-Visa. In general, you will need  a valid passport, a recent
+              passport photo a valid email address and possibly other documents specific to
+              the other documents specific to the destination country.
               </p>
             </details>
             <details className="p-1 border-b border-gray-300">
               <summary className="cursor-pointer outline-none focus:outline-none">
                 <h3 className="text-xl font-semibold text-gray-700">
-                  Q: Quel est le délai de traitement pour obtenir un e-Visa ?
+                  Q: What is the processing time for an e-visa
                 </h3>
               </summary>
               <p className="text-gray-600 mt-2">
-                A: Le délai de traitement pour obtenir un e-Visa peut varier en
-                fonction du pays de destination et du type de visa demandé. En
-                général, le délai de traitement peut aller de quelques heures à
-                plusieurs jours ouvrables.
+              A: The processing time for obtaining an e-Visa may vary depending on the country 
+              of destination and the type of visa requested. In general, processing time can 
+              range from a few hours to several working days.
               </p>
             </details>
             <details className="p-1 border-b border-gray-300">
               <summary className="cursor-pointer outline-none focus:outline-none">
                 <h3 className="text-xl font-semibold text-gray-700">
-                  Q: Comment puis-je suivre ma demande d&apos;e-Visa ?
+                  Q: How can i follow up my e-Visa application ?
                 </h3>
               </summary>
               <p className="text-gray-600 mt-2">
-                A: Vous pouvez généralement suivre votre demande d&apos;e-Visa
-                en utilisant un numéro de suivi ou en vous connectant à votre
-                compte sur le site officiel du gouvernement ou de l&apos;agence
-                de voyage responsable du traitement de votre demande.
+                
               </p>
             </details>
             <details className="p-1 border-b border-gray-300">
               <summary className="cursor-pointer outline-none focus:outline-none">
                 <h3 className="text-xl font-semibold text-gray-700">
-                  Q: Quels sont les frais associés à la demande d&apos;un e-Visa
-                  ?
+                  Q: What are the fees associated with applying for an e-Visa?
                 </h3>
               </summary>
               <p className="text-gray-600 mt-2">
-                A: Les frais associés à la demande d&apos;un e-Visa varient en
-                fonction du pays de destination et du type de visa demandé.
-                Assurez-vous de vérifier les frais exacts auprès du gouvernement
-                ou de l&apos;agence de voyage responsable du traitement de votre
-                demande.
+              A: The fees associated with applying for an e-Visa vary depending on the country of
+               destination and the type of
+               visa requested.  Be sure to check the exact fees with the government  or the 
+              travel agency responsible for processing your application.
               </p>
             </details>
             <details className="p-1 border-b border-gray-300">
               <summary className="cursor-pointer outline-none focus:outline-none">
                 <h3 className="text-xl font-semibold text-gray-700">
-                  Q: Puis-je demander un e-Visa si je suis déjà à
-                  l&apos;étranger ?
+                  Q: Can I apply for an e-Visa if I am already abroad?
                 </h3>
               </summary>
               <p className="text-gray-600 mt-2">
-                A: Oui, dans la plupart des cas, vous pouvez demander un e-Visa
-                même si vous êtes déjà à l&apos;étranger. Cependant, les
-                exigences et les procédures peuvent varier en fonction du pays
-                de destination et du type de visa demandé. Il est recommandé de
-                consulter les informations officielles du gouvernement ou de
-                l&apos;agence de voyage responsable du traitement de votre
-                demande pour obtenir les informations les plus à jour.
+              A: Yes, in most cases you can apply for an e-Visa, even if you are already abroad. However, the requirements
+              and procedures may vary depending on the country of destination  and the type of visa requested. It is
+              recommended that you  consult the official information of the government or travel agency responsible for processing
+              your application for the most up-to-date information. 
               </p>
             </details>
             <details className="p-1 border-b border-gray-300">
@@ -87,120 +76,101 @@ export default function page() {
                 </h3>
               </summary>
               <p className="text-gray-600 mt-2">
-                A: Si votre demande d&apos;e-Visa est refusée, vous devrez
-                généralement prendre contact avec l&apos;ambassade ou le
-                consulat du pays de destination pour obtenir des informations
-                sur les raisons du refus et les options disponibles pour
-                contester ou corriger votre demande.
+              A: If your application for an e-Visa is denied you will usually need 
+              to contact the embassy or consulate of the country of destination to obtain information to
+               know  the reasons for the refusal and the options available to you 
               </p>
             </details>
             <details className="p-1 border-b border-gray-300">
               <summary className="cursor-pointer outline-none focus:outline-none">
                 <h3 className="text-xl font-semibold text-gray-700">
-                  Q: Combien de temps est valable un e-Visa ?
+                  Q: How long is an e-visa valid for ?
                 </h3>
               </summary>
               <p className="text-gray-600 mt-2">
-                A: La durée de validité d&apos;un e-Visa peut varier en fonction
-                du pays de destination et du type de visa délivré. En général,
-                un e-Visa peut être valide pour quelques jours à plusieurs mois,
-                avec la possibilité de demander une prolongation si nécessaire.
+                A:The period of validity of an e-Visa may vary depending on 
+                the country of destination and the type of visa issued. 
+                In general,an e-Visa can be valid for a few days to several months,
+                with the possibility to request an extension if necessary.
               </p>
             </details>
             <details className="p-1 border-b border-gray-300">
               <summary className="cursor-pointer outline-none focus:outline-none">
                 <h3 className="text-xl font-semibold text-gray-700">
-                  Q: Puis-je annuler ma demande d&apos;e-Visa une fois soumise ?
+                  Q: Can I cancel my e-Visa application once submitted? ?
                 </h3>
               </summary>
               <p className="text-gray-600 mt-2">
-                A: En général, il n&apos;est pas possible d&apos;annuler une
-                demande d&apos;e-Visa une fois qu&apos;elle a été soumise.
-                Cependant, les politiques d&apos;annulation peuvent varier en
-                fonction du pays de destination et du système de traitement des
-                demandes. Il est recommandé de consulter les informations
-                officielles du gouvernement ou de l&apos;agence de voyage
-                responsable du traitement de votre demande pour obtenir des
-                informations spécifiques sur les politiques d&apos;annulation.
+              A: In general, it is not possible to cancel an  e-Visa application
+              once it has been submitted. However, cancellation policies
+              may vary depending on the destination country and the processing 
+              system. It is recommended that you consult official government or
+              official information from the government or travel agency  responsible
+              for processing your request for specific information on cancellation policies.
               </p>
             </details>
             <details className="p-1 border-b border-gray-300">
               <summary className="cursor-pointer outline-none focus:outline-none">
                 <h3 className="text-xl font-semibold text-gray-700">
-                  Q: Comment puis-je obtenir un remboursement si ma demande
-                  d&apos;e-Visa est refusée ou annulée ?
+                  Q: How can I get a refund if my e-Visa application
+                   is refused or cancelled? 
                 </h3>
               </summary>
               <p className="text-gray-600 mt-2">
-                A: Les politiques de remboursement en cas de refus ou
-                d&apos;annulation d&apos;une demande d&apos;e-Visa peuvent
-                varier en fonction du pays de destination et du système de
-                traitement des demandes. Il est recommandé de consulter les
-                informations officielles du gouvernement ou de l&apos;agence de
-                voyage responsable du traitement de votre demande pour connaître
-                les politiques de remboursement spécifiques. En général, si
-                votre demande d&apos;e-Visa est refusée ou annulée, vous devrez
-                prendre contact avec l&apos;ambassade ou le consulat du pays de
-                destination pour obtenir des informations sur les procédures de
-                remboursement et les documents requis pour soumettre une demande
-                de remboursement.
+              A: Refund policies in case of refusal or cancellation of an e-Visa application may vary 
+              depending on the destination country and the application processing system. It is recommended 
+              to consult the official information of the official information from the government or travel 
+              agency responsible for processing your application for specific refund policies. In general, if your e-Visa application is refused or cancelled, you 
+              should contact the embassy or consulate of the country of destination country of destination for
+              information on refund procedures and procedures and the documents required to submit a refund request.
               </p>
             </details>
             <details className="p-1 border-b border-gray-300">
               <summary className="cursor-pointer outline-none focus:outline-none">
                 <h3 className="text-xl font-semibold text-gray-700">
-                  Q: Dois-je imprimer mon e-Visa pour voyager ?
+                  Q: Should i print my e-visa document to travel ?
                 </h3>
               </summary>
               <p className="text-gray-600 mt-2">
-                A: En général, il n&apos;est pas nécessaire d&apos;imprimer
-                votre e-Visa pour voyager. La plupart des pays acceptent une
-                version électronique de votre e-Visa sur votre smartphone ou
-                tablette. Cependant, il est recommandé de vérifier les exigences
-                spécifiques du pays de destination, car certaines destinations
-                peuvent exiger une copie imprimée de votre e-Visa. Il est
-                toujours bon d&apos;avoir une copie de votre e-Visa sous une
-                forme électronique et imprimée lors de vos déplacements pour
-                éviter tout problème potentiel.
+                A: In general, it is not necessary to print out your e-Visa
+                to travel. Most countries accept an electronic version of your
+                electronic version of your e-Visa on your smartphone or tablet.
+                tablet. However, it is advisable to check the specific requirements of the
+                destination country, as some destinations may require a printed copy of your e-Visa. It is always
+                It is always a good idea to have a copy of your e-Visa in both electronic and
+                electronic and printed form when travelling to avoid any potential problems.
+
               </p>
             </details>
             <details className="p-1 border-b border-gray-300">
               <summary className="cursor-pointer outline-none focus:outline-none">
                 <h3 className="text-xl font-semibold text-gray-700">
-                  Q: Puis-je demander un e-Visa pour quelqu&apos;un d&apos;autre
-                  ?
+                  Q: Can I make a visa request for someone elese?
                 </h3>
               </summary>
               <p className="text-gray-600 mt-2">
-                A: Oui, en général, vous pouvez demander un e-Visa pour
-                quelqu&apos;un d&apos;autre, tel qu&apos;un membre de la
-                famille, un ami ou un employé, si vous avez les informations et
-                les documents requis pour leur demande. Cependant, il est
-                important de vérifier les procédures spécifiques du pays de
-                destination, car certaines destinations peuvent avoir des
-                exigences particulières pour les demandes de visa en tant que
-                tiers. Assurez-vous de fournir les informations et les documents
-                exacts de la personne pour laquelle vous faites la demande
-                d&apos;e-Visa.
+                A: 
+                Yes, in general you can apply for an e-Visa for someone else, such as a family member,
+                friend or employee, if you have the information and documents required for their 
+                application. However, it is important to check the specific procedures in the country of
+                destination, as some destinations may have special requirements for applications as a third party.
+                Make sure you provide the correct information and documents
+                of the person for whom you are applying for an e-Visa application. 
               </p>
             </details>
             <details className="p-1 border-b border-gray-300">
               <summary className="cursor-pointer outline-none focus:outline-none">
                 <h3 className="text-xl font-semibold text-gray-700">
-                  Q: Puis-je utiliser mon e-Visa pour entrer plusieurs fois dans
-                  le pays de destination ?
+                  Q: Can I use my e-Visa to enter the country of destination more than once? ?
                 </h3>
               </summary>
               <p className="text-gray-600 mt-2">
-                A: La possibilité d&apos;utiliser un e-Visa pour entrer
-                plusieurs fois dans le pays de destination dépend des conditions
-                spécifiques du visa délivré et du pays de destination. Certains
-                e-Visas permettent des entrées multiples, ce qui signifie que
-                vous pouvez entrer et sortir du pays de destination plusieurs
-                fois pendant la période de validité du visa, tandis que
-                d&apos;autres e-Visas permettent seulement une seule entrée. Il
-                est important de vérifier les conditions de votre e-Visa et les
-                exigences spécifiques du pays de destination avant de voyager.
+              A: The possibility of using an e-Visa to enter the destination country more than 
+              once depends on the specific conditions of the visa issued and the destination country.
+              Some e-Visas allow multiple entries, which means that you can enter and leave the 
+              destination country several times during the validity period of the visa, while other
+              e-Visas allow only one entry. It It is important to check the conditions of your e-Visa and
+               the specific specific requirements of the destination country before travelling.
               </p>
             </details>
           </div>

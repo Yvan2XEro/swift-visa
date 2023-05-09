@@ -8,82 +8,72 @@ export default function page() {
       <section className="py-16 grid grid-cols-1 md:grid-cols-2 gap-2">
         <div className="w-full px-4 py-8">
           <h2 className="text-3xl font-bold mb-4">
-            Étape 1: Faites votre demande
+           Step 1 : Make your application
           </h2>
           <p className="text-lg mb-4">
-            La première étape de votre processus d’obtention d’un e-Visa pour le
-            Bénin commence par l’initiation de votre demande. Pour initier votre
-            demande, il vous suffira de cliquer sur le bouton jaune DEMANDER UN
-            E-VISA à l’accueil. Vous aurez donc à renseigner à travers le
-            formulaire qui s’affichera :
+          The first step in your process of obtaining an e-Visa  starts
+          with the initiation of your application. To initiate your application,
+          all you have to do is click on the yellow START button at the reception desk. You will
+          then have to fill in through the form that will be displayed:
           </p>
           <ol className="text-lg mb-4">
-            <li>votre adresse email</li>
-            <li>à le ressaisir pour confirmation</li>
+            <li>your email addressl</li>
+            <li>confirm the email address </li>
             <li>
-              votre numéro de document de voyage (généralement le passeport)
+              your travel document (generally the passport)
             </li>
-            <li>et la date d’expiration de ce dernier</li>
+            <li>the expiring date of the travel document</li>
           </ol>
           <p className="text-lg">
-            Il faut noter que toutes ces informations sont requises pour
-            l’initialisation de votre demande. Une fois tous les champs
-            renseignés, cliquez sur le bouton vert ENVOYER et votre demande sera
-            initiée. Vous recevrez à l’issue de cette première étape, un email
-            vous invitant à confirmer votre demande à travers un lien.
-            Rendez-vous donc dans votre boite mail.
+          Please note that all this information is required for initialization of your application.
+          Once you have completed all the fields, click on the green SEND button and your
+          application will be  initiated. At the send of this first step, you will receive an email  
+           inviting you to confirm your request through a link. Go to your mailbox.
           </p>
         </div>
         <div className="w-full px-4 py-8">
           <h2 className="text-3xl font-bold mb-4">
-            Étape 2: Renseignez vos données
+            Step 2 : Fill the next form with your informations
           </h2>
           <p className="text-lg mb-4">
-            Le mail reçu à l’issue de l’étape 1 contient un lien accessible via
-            le bouton « POURSUIVRE MA DEMANDE ». En cliquant sur ce bouton vous
-            accédez au formulaire de renseignement des données nécessaires pour
-            le traitement de votre demande. Le formulaire est divisé en quatre
-            (04) étapes :
+          The email received after step 1 contains a link . By clicking
+          on this you access the form for filling in the data required 
+          to process your application. The form is divided into six steps.
           </p>
           <ul className="text-lg mb-4">
-            <li>formulaire des données personnelles</li>
-            <li>formulaire des données du e-Visa</li>
-            <li>formulaire des données du voyage</li>
-            <li>formulaire des données du passeport</li>
+            <li>Personal informations form</li>
+            <li>Visa kind/type form</li>
+            <li>Travel information form</li>
+            <li>Passport informations form</li>
           </ul>
           <p className="text-lg">
-            Vous pouvez cliquer sur le bouton « SUIVANT » pour passer au
-            formulaire suivant ou sur « PRÉCÉDENT » pour revenir au formulaire
-            précédent pour d’éventuelles corrections. Les champs requis
-            (obligatoires) sont marqués d’un astérisque (*).
+          You can click on the "NEXT" button to go to the next form or on
+          "PREVIOUS" to return to the previous form for possible corrections.
+           Required (mandatory) fields are marked with an asterisk (*).
           </p>
         </div>
         <div className="w-full px-4 py-8">
           <h2 className="text-3xl font-bold mb-4">
-            Étape 3: Payez votre demande
+            Step 3: Pay your application
           </h2>
           <p>
-            Une fois toutes les données renseignées, que vous les avez vérifiées
-            et que tout vous semble correct, vous pourrez passer au paiement en
-            cliquant sur le bouton « CONFIRMER ET PAYER ». Renseignez les
-            informations requises et rassurez-vous d’avoir les fonds nécessaires
-            pour votre opération puis valider votre transaction. La réussite de
-            cette opération est déterminante pour la validation de votre
-            demande. Vous serez ensuite redirigé vers l’accueil de notre page
-            avec un message de confirmation de l’enregistrement de votre
-            demande.
+          Once you have filled in all the details, checked them and everything seems 
+          correct, you can proceed to payment by clicking on the "CONFIRM AND PAY" button.
+          Fill in the required information and make sure you have the necessary funds for
+          your transaction and then complete your transaction. The success of this operation
+          is decisive for the validation of your request. You will then be redirected to our 
+          home page with a message confirming the registration of your application.
           </p>
         </div>
         <div className="w-full px-4 py-8">
           <h2 className="text-3xl font-bold mb-4">
-            Étape 4: Suivez votre demande
+            Step 4: Follow up your request
           </h2>
           <p>
-            Une fois votre paiement confirmé, vous recevrez un mail vous
-            précisant le numéro de votre demande. Avec ce numéro, vous pouvez
-            vérifier le statut de votre demande à tout moment en cliquant sur le
-            bouton « SUIVRE VOTRE DEMANDE » situé sur la page d’accueil de la
-            plateforme e-Visa
+          Once your payment has been confirmed, you will receive an email with
+          your application number. With this number, you can check the status
+          of your application at any time by clicking on the
+           "FOLLOW UP YOUR APPLICATION" button on the e-Visa platform homepage.
           </p>
         </div>
       </section>

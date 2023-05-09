@@ -37,7 +37,7 @@ export function PersonalInfosForm2() {
     <form onSubmit={handleSubmit(submit)}>
       <DemandFormWrapper>
         <label className="my-2">
-          <span className="text-sm block mb-1">Country of nationality:</span>
+          <span className="text-sm block mb-1">Citizenship:</span>
           <select {...register("nationality")}>
             <option>select...</option>
             {countries.map((c) => (
