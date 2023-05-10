@@ -40,9 +40,9 @@ export function TravelForm2() {
           </span>
           <select {...register("destination")}>
             <option value="">select...</option>
-            {cmrCities.map((c) => (
-              <option key={c} value={c}>
-                {c}
+            {countries.map((c) => (
+              <option key={c.name} value={c.name}>
+                {c.name}
               </option>
             ))}
           </select>

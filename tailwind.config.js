@@ -13,6 +13,7 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         mobileBg: "url('/assets/images/bg-sidebar-mobile.svg')",
         desktopBg: "url('/assets/images/bg-sidebar-desktop.svg')",
+        omMomoBg: "url('/assets/images/om-momo.jpg')"
       },
     },
   },
