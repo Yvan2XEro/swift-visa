@@ -4,6 +4,7 @@ import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { Demand } from "@/types";
 import { useState } from "react";
+import Link from "next/link";
 
 const verifyShema = yup.object().shape({
   id: yup.string().min(10).required(),
@@ -52,7 +53,13 @@ export function VerfiyStatusForm() {
         {!!data && (
           <>
             <p className="text-2xl">STATUS:</p>
-            <Badge color={"success"}>{data.statut}</Badge>
+            <Badge color={"success"}>rtzuigh</Badge>
+            <Link
+              href={`/demands/${data.id}/payment`}
+              className="text-blue-500"
+            >
+              More informations
+            </Link>
           </>
         )}
       </Modal.Body>
