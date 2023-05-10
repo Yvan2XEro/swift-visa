@@ -54,7 +54,7 @@ export default function Page({ params: { id } }: { params: { id: string } }) {
           className="text-center max-h-[85px]"
         />
         <div className="flex flex-col gap-3 justify-between">
-          <Button>pay now ({demand?.price} XAF)</Button>
+          <Button color="warning">pay now ({demand?.price} XAF)</Button>
           <Button onClick={handlePrint}>PRINT</Button>
         </div>
       </div>
