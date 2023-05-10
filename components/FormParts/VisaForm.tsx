@@ -27,7 +27,10 @@ export function VisaForm() {
   });
 
   function submit(data: Partial<Demand>) {
-    setFormValues(data);
+    setFormValues({
+      ...data,
+      price: visasTypes.find((t) => t.type == data.kindVisa)?.price,
+    });
     formStepState?.next();
   }
   return (
