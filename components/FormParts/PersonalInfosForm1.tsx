@@ -7,13 +7,18 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { Demand } from "@/types";
+import { useEffect } from "react";
 
 const shema = yup.object().shape({
   firstName: yup.string().min(3).required(),
   lastName: yup.string().min(3).required(),
   gender: yup.string().required(),
   birthDate: yup.string().required(),
-  birthCountry: yup.string().required(),
+  cniNumber: yup
+    .string()
+    .required()
+    .min(5)
+    .matches(/^[0-9]+$/, "Must be valid!"),
   birthPlace: yup.string().required(),
 });
 
@@ -22,12 +27,15 @@ export function PersonalInfosForm1() {
   const {
     register,
     handleSubmit,
+    getValues,
     formState: { errors, isValid },
   } = useForm<Partial<Demand & { emailVerif: string }>>({
     resolver: yupResolver(shema),
     values: formValues,
     mode: "onChange",
   });
+
+  useEffect(() => console.log(errors), [errors]);
 
   function submit(data: Partial<Demand>) {
     setFormValues(data);
@@ -47,7 +55,7 @@ export function PersonalInfosForm1() {
         <Radio.Group
           isRequired
           {...register("gender")}
-          onChange={(value) => setFormValues({ gender: value })}
+          onChange={(value) => setFormValues({ ...getValues(), gender: value })}
           label="Gender:"
         >
           <Radio {...register("gender")} value="Male">
@@ -67,26 +75,20 @@ export function PersonalInfosForm1() {
         {!!errors.birthDate && (
           <small className="text-red-600">{errors.birthDate.message}</small>
         )}
-        <Input required {...register("birthPlace")} label="Place of Birth" />
+        <Input required {...register("birthPlace")} label="Place of Birth:" />
         {!!errors.birthPlace && (
           <small className="text-red-600">{errors.birthPlace.message}</small>
         )}
-        <label className="my-2">
-          <span className="text-sm block mb-1">Country of birth:</span>
-          <select {...register("birthCountry")}>
-            <option>select...</option>
-            {[{ name: "Cameroon" }, ...countries].map((c) => (
-              <option key={c.name} value={c.name}>
-                {c.name}
-              </option>
-            ))}
-          </select>
-          {!!errors.birthCountry && (
-            <small className="text-red-600">
-              {errors.birthCountry.message}
-            </small>
-          )}
-        </label>
+
+        <Input
+          required
+          {...register("cniNumber")}
+          label="Identity Card number:"
+        />
+        {!!errors.cniNumber && (
+          <small className="text-red-600">{errors.cniNumber.message}</small>
+        )}
+
         <DemandFormButtons />
       </DemandFormWrapper>
     </form>

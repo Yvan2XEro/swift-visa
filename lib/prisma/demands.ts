@@ -11,6 +11,16 @@ export async function createDemand(demand: Demand) {
     }
 }
 
+export async function findAll() {
+    try {
+        const demandFromDb = await prisma.demand.findMany()
+        return { demandFromDb }
+    } catch (error) {
+        console.log(error)
+        return { error }
+    }
+}
+
 export async function findDemand(id: any) {
     try {
         const demandFromDb = await prisma.demand.findUnique({
@@ -38,6 +48,17 @@ export async function updateDemand(id: any, data: Demand) {
             data: data as any
         });
         return { demand: demandFromDb as Demand }
+    } catch (error) {
+        return { error }
+    }
+}
+
+export async function deleteDemand(id: any) {
+    try {
+        await prisma.demand.delete({
+            where: { id },
+        });
+        return { success: true }
     } catch (error) {
         return { error }
     }

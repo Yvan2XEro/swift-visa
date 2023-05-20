@@ -18,6 +18,7 @@ model Demand {
   email            String   @unique
   lastName         String?
   firstName        String?
+  cniNumber        String?
   gender           String?
   birthDate        String?
   birthPlace       String?
@@ -29,6 +30,8 @@ model Demand {
   homeAddress      String?
   kindVisa         String?
   fromEmbassy      Boolean?
+  entryNumber      String?  @default("One entry")
+  visaCategory     String?  @default("temporary stay (3 months)")
   price            Float?
   previousStayDate String?
   entryDate        String?
@@ -44,6 +47,13 @@ model Demand {
   passportExpireDate   String
   passportIssueCountry String?
   passportIssueDate    String?
+
+  passportProof               String?
+  returnFlightTicketProof     String?
+  yellowFeverVaccinationProof String?
+  invitationLetter            String?
+  hotelBookingProof           String?
+  passportSizePhoto           String?
 
   token      String?
   expireLink DateTime?

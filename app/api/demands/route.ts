@@ -1,6 +1,6 @@
 import { demandLinkMail, sendEmail } from '@/lib/functions/mail';
 import { generateExpirableToken, getExpirationDateTime } from '@/lib/functions/tokens';
-import { createDemand, updateDemand } from '@/lib/prisma/demands';
+import { createDemand, updateDemand, findAll } from '@/lib/prisma/demands';
 import { Demand } from '@/types';
 import { NextResponse } from 'next/server';
 
@@ -20,6 +20,17 @@ export async function POST(request: Request) {
         return NextResponse.json({ message: response?.response || "Unable to send email" }, { status: 501 })
     } catch (error: any) {
         console.log(error)
+        return NextResponse.json({ message: error.toString() }, { status: 500 })
+    }
+}
+
+export async function GET() {
+    try {
+        const { demandFromDb, error } = await findAll()
+        if (error)
+            return NextResponse.json({ message: error.toString() }, { status: 500 })
+        return NextResponse.json(demandFromDb, { status: 200 })
+    } catch (error: any) {
         return NextResponse.json({ message: error.toString() }, { status: 500 })
     }
 }

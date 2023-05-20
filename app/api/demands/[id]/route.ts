@@ -15,6 +15,7 @@ export async function GET(_: Request, { params }: any) {
 export async function PUT(req: Request, { params }: any) {
     try {
         const data = await req.json();
+        console.log(data)
         const { demand, error } = await updateDemand(params.id, data)
         if (!!error || !demand) return NextResponse.json({ message: "not found" }, { status: 404 })
         return NextResponse.json(demand, { status: 201 })

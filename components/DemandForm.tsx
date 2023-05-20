@@ -23,7 +23,6 @@ export default function DemandForm({
   const [idFromToken, setidFromToken] = useState<any>();
   useEffect(() => {
     (async () => {
-      console.log(id, token);
       const response = await fetch(`/api/demand-id/${token}`);
       if (response.ok) {
         return setidFromToken((await response.json()).id);

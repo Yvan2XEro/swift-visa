@@ -15,6 +15,10 @@ export type FormStepState = {
     currentStep: FormStep
 }
 
+export type PreviewableFile = File & {
+    preview: string
+}
+
 export type Demand = {
     id?: string
     email: string
@@ -22,6 +26,8 @@ export type Demand = {
     firstName: string
     gender: string
     birthDate: string
+    cniNumber?: string
+    entryNumber?: string
     birthPlace: string
     birthCountry: string
     nationality: string
@@ -30,6 +36,7 @@ export type Demand = {
     phone2?: string
     homeAddress: string
     kindVisa?: string
+    visaCategory?: string
     fromEmbassy: Boolean
     price: number
     previousStayDate: string
@@ -52,4 +59,28 @@ export type Demand = {
     statut?: string
     createdAt?: Date
     updatedAt?: Date
+
+    passportProof?: any
+    returnFlightTicketProof?: any
+    yellowFeverVaccinationProof?: any
+    invitationLetter?: any
+    hotelBookingProof?: any
+    passportSizePhoto?: any
+}
+
+export type DemandFiles = {
+    passportProof?: PreviewableFile
+    returnFlightTicketProof?: PreviewableFile
+    yellowFeverVaccinationProof?: PreviewableFile
+    invitationLetter?: PreviewableFile
+    hotelBookingProof?: PreviewableFile
+    passportSizePhoto?: PreviewableFile
+}
+export type DemandFilesErrors = {
+    passportProof?: string
+    returnFlightTicketProof?: string
+    yellowFeverVaccinationProof?: string
+    invitationLetter?: string
+    hotelBookingProof?: string
+    passportSizePhoto?: string
 }

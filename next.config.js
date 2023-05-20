@@ -2,7 +2,8 @@
 const nextConfig = {
   experimental: {
     appDir: true,
-    typedRoutes: true
+    typedRoutes: true,
+
   },
   env: {
     APP_NAME: "Swift VISA",
@@ -12,6 +13,9 @@ const nextConfig = {
     NOREPLY_EMAIL: "swift.visa237@gmail.com",
     GMAIL_PASSWORD: "lxbvivzjizrvecde",
     DATABASE_URL: "postgres://default:D51lyHCSGpvU@ep-plain-bonus-066356-pooler.us-east-1.postgres.vercel-storage.com:5432/verceldb?pgbouncer=true&connect_timeout=15"
+  },
+  images: {
+    domains: ["firebasestorage.googleapis.com"]
   }
 }
 module.exports = nextConfig

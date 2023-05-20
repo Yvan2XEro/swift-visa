@@ -13,6 +13,7 @@ import { VisaForm } from "@/components/FormParts/VisaForm";
 import { TravelForm1 } from "@/components/FormParts/TravelForm1";
 import { TravelForm2 } from "@/components/FormParts/TravelForm2";
 import { PassportForm } from "@/components/FormParts/PassportForm";
+import { DocumentsForm } from "@/components/FormParts/DocumentsForm";
 
 const initialValue = {
   formStepState: undefined as FormStepState | undefined,
@@ -26,9 +27,7 @@ const DemandFormContext = createContext(initialValue);
 export function DemandFormProvider({ children }: PropsWithChildren) {
   const formStepState = useMultiSteps(steps);
   const [formValues, setFormValues] = useState<Demand>({} as Demand);
-  useEffect(() => {
-    console.log("OOOOOOO", formValues);
-  }, [formValues]);
+
   function progressSteps() {
     return (
       <>
@@ -88,6 +87,10 @@ const steps: FormStep[] = [
   {
     form: <PassportForm key={6} />,
     title: "Passport informations",
+  },
+  {
+    form: <DocumentsForm key={7} />,
+    title: "Documents",
   },
 ];
 

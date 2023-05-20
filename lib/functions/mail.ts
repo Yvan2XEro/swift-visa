@@ -39,3 +39,18 @@ export function demandLinkMail(link: string, id: any) {
     <p style="text-align: center;">${process.env.APP_NAME}</p>
     `
 }
+
+export function downloadMail(link: string) {
+    return `
+    <p>
+    Dear Applicant, <br/>
+    Your visa for Cameroon is available, please click on this link to download it
+    </p>
+    <p>
+    <a href="${link}">${link}</a>
+    </p>
+
+    <br/><br/>
+    <p style="text-align: center;">${process.env.APP_NAME}</p>
+    `
+}

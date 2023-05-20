@@ -11,8 +11,9 @@ import { Demand } from "@/types";
 const shema = yup.object().shape({
   nationality: yup.string().min(3).required(),
   profession: yup.string().min(3).required(),
-  phone1: yup.string(),
   phone2: yup.string(),
+  phone1: yup.string(),
+  birthCountry: yup.string().required(),
 });
 
 export function PersonalInfosForm2() {
@@ -71,6 +72,22 @@ export function PersonalInfosForm2() {
         {!!errors.homeAddress && (
           <small className="text-red-600">{errors.homeAddress.message}</small>
         )}
+        <label className="my-2">
+          <span className="text-sm block mb-1">Country of birth:</span>
+          <select {...register("birthCountry")}>
+            <option>select...</option>
+            {[{ name: "Cameroon" }, ...countries].map((c) => (
+              <option key={c.name} value={c.name}>
+                {c.name}
+              </option>
+            ))}
+          </select>
+          {!!errors.birthCountry && (
+            <small className="text-red-600">
+              {errors.birthCountry.message}
+            </small>
+          )}
+        </label>
         <DemandFormButtons />
       </DemandFormWrapper>
     </form>

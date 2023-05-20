@@ -20,8 +20,7 @@ const shema = yup.object().shape({
   passportIssueDate: yup.string().required(),
 });
 export function PassportForm() {
-  const router = useRouter();
-  const { formValues, setFormValues } = useDemandForm();
+  const { formValues, setFormValues, formStepState } = useDemandForm();
   const {
     register,
     handleSubmit,
@@ -34,21 +33,8 @@ export function PassportForm() {
   async function submit(data: Partial<Demand>) {
     setFormValues({ ...data, statut: "waiting" });
 
-    try {
-      const response = await fetch(`/api/demands/${formValues.id}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ ...formValues, id: undefined }),
-      });
-      if (response.ok) {
-        router.push(`/demands/${formValues.id}/payment`);
-      }
-      console.log(response);
-    } catch (error) {
-      console.log(error);
-    }
+    setFormValues(data);
+    formStepState?.next();
   }
   return (
     <form onSubmit={handleSubmit(submit)}>

@@ -10,7 +10,13 @@ import { useForm } from "react-hook-form";
 import { Demand } from "@/types";
 
 const shema = yup.object().shape({
-  kindVisa: yup.string().min(3).required(),
+  kindVisa: yup
+    .string()
+    .min(3)
+    .required()
+    .matches(/^(?!select...).*$/, "This field is required!"),
+  visaCategory: yup.string().required(),
+  entryNumber: yup.string().required(),
   fromEmbassy: yup.boolean().required(),
 });
 
@@ -19,6 +25,7 @@ export function VisaForm() {
   const {
     register,
     handleSubmit,
+    getValues,
     formState: { errors, isValid },
   } = useForm<Partial<Demand & { emailVerif: string }>>({
     resolver: yupResolver(shema),
@@ -47,7 +54,9 @@ export function VisaForm() {
             ))}
           </select>
         </label>
-
+        {!!errors.kindVisa && (
+          <small className="text-red-600">{errors.kindVisa.message}</small>
+        )}
         <label className=" pl-[0.15rem] hover:cursor-pointer my-2 flex justify-between">
           Are you making your request from an embassy?
           <input
@@ -61,6 +70,42 @@ export function VisaForm() {
         {!!errors.fromEmbassy && (
           <small className="text-red-600">{errors.fromEmbassy.message}</small>
         )}
+        <Radio.Group
+          isRequired
+          {...register("visaCategory")}
+          value={formValues.visaCategory}
+          onChange={(value) =>
+            setFormValues({ ...getValues(), visaCategory: value })
+          }
+          label="Visa category:"
+        >
+          <Radio
+            {...register("visaCategory")}
+            value="temporary stay (3 months)"
+            defaultChecked
+          >
+            Temporary stay (3 months)
+          </Radio>
+          <Radio {...register("visaCategory")} value="Long stay (6months)">
+            Long stay (6months)
+          </Radio>
+        </Radio.Group>
+        <Radio.Group
+          isRequired
+          {...register("entryNumber")}
+          value={formValues.entryNumber}
+          onChange={(value) =>
+            setFormValues({ ...getValues(), entryNumber: value })
+          }
+          label="Entry type:"
+        >
+          <Radio {...register("entryNumber")} value="One entry" defaultChecked>
+            One entry
+          </Radio>
+          <Radio {...register("entryNumber")} value="Multiple entries">
+            Multiple entries
+          </Radio>
+        </Radio.Group>
         <DemandFormButtons />
       </DemandFormWrapper>
     </form>

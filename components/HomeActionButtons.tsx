@@ -3,29 +3,13 @@ import React, { ReactNode, useReducer, useState } from "react";
 import { Button, Input, Loading, Modal } from "@nextui-org/react";
 import { VerfiyStatusForm } from "./VerfiyStatusForm";
 import { AskForm } from "./AskForm";
+import { ActionModalState, handleActionModalReducer } from "@/lib/reducers";
 
-type ActionModalState = {
-  isOpen: boolean;
-  element: ReactNode;
-};
 const actionModalState: ActionModalState = {
   isOpen: false,
   element: <AskForm />,
 };
-type Action = {
-  type: "CLOSE" | "OPEN";
-  payload?: ReactNode;
-};
-function handleActionModalReducer(state: ActionModalState, action: Action) {
-  switch (action.type) {
-    case "CLOSE":
-      return { ...state, isOpen: false };
-    case "OPEN":
-      return { element: action.payload, isOpen: true };
-    default:
-      return state;
-  }
-}
+
 export default function HomeActionButtons() {
   const [state, dispatch] = useReducer(
     handleActionModalReducer,
