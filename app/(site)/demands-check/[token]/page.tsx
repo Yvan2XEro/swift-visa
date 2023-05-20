@@ -3,7 +3,7 @@ import { redirect } from "next/navigation";
 
 export default async function page({ params }: any) {
   const id = null; //await idByToken(params.token);
-  if (!!id) redirect(`/demands/${id}/${params.token}`);
+  // if (!!id) redirect(`/demands/${id}/${params.token}`);
 
   return (
     <main>
