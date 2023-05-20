@@ -3,8 +3,7 @@ import { AuthOptions } from "next-auth";
 import NextAuth from "next-auth/next";
 import CredentialsProvider from "next-auth/providers/credentials";
 
-const backendURL = process.env.NEXT_PUBLIC_BACKEND_URL;
-export const authOptions: AuthOptions = {
+const authOptions: AuthOptions = {
     session: {
         strategy: "jwt",
         maxAge: 30 * 24 * 60 * 60, // 30 days
