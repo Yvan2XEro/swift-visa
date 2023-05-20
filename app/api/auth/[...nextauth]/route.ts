@@ -1,7 +1,7 @@
-import { NextApiRequest, NextApiResponse } from "next";
 import { AuthOptions } from "next-auth";
 import NextAuth from "next-auth/next";
 import CredentialsProvider from "next-auth/providers/credentials";
+import { NextResponse } from "next/server";
 
 const authOptions: AuthOptions = {
     session: {
@@ -61,5 +61,5 @@ const authOptions: AuthOptions = {
     }
 };
 
-const handler = (req: NextApiRequest, res: NextApiResponse) => NextAuth(req, res, authOptions);
+const handler = (req: any, res: any) => NextAuth(req, res, authOptions);
 export { handler as GET, handler as POST }

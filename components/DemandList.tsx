@@ -16,7 +16,7 @@ const actionModalState: ActionModalState = {
   element: <></>,
 };
 async function fetchData() {
-  const response = await fetch("http://127.0.0.1:3000/api/demands");
+  const response = await fetch(`${process.env.HOST}/api/demands`);
   const data = await response.json();
   if (response.ok) {
     return data as Demand[];

@@ -24,7 +24,7 @@ export default function DownloadButton({ demand }: { demand: Demand }) {
       beginDate: beginDate.toLocaleDateString(),
       endDate: endDate.toLocaleDateString(),
     };
-  }, [demand.updatedAt]);
+  }, [demand.updatedAt, demand.duration]);
   return (
     <div>
       <div className="text-center">

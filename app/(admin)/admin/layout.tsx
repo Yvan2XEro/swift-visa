@@ -3,7 +3,7 @@ import { Avatar, Dropdown, Navbar } from "@nextui-org/react";
 import { useSession, signOut } from "next-auth/react";
 import React, { PropsWithChildren } from "react";
 
-export default function layout({ children }: PropsWithChildren) {
+export default function Layout({ children }: PropsWithChildren) {
   const { data } = useSession({ required: true });
   return (
     <>
