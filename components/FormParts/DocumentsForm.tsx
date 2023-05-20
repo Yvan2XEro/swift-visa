@@ -169,7 +169,7 @@ export function DocumentsForm() {
           </div>
           <div>
             <label className="cursor-pointer p-3">
-              Return flight ticket:
+              Yellow Fever Vaccination Proof:
               <input
                 className="hidden"
                 accept="image/*"
@@ -194,7 +194,7 @@ export function DocumentsForm() {
           </div>
           <div>
             <label className="cursor-pointer p-3">
-              Return flight ticket:
+              Invitation Letter:
               <input
                 className="hidden"
                 accept="image/*"
@@ -216,7 +216,7 @@ export function DocumentsForm() {
           </div>
           <div>
             <label className="cursor-pointer p-3">
-              Return flight ticket:
+              Hotel Booking Proof:
               <input
                 className="hidden"
                 accept="image/*"
@@ -239,7 +239,7 @@ export function DocumentsForm() {
 
           <div>
             <label className="cursor-pointer p-3">
-              Return flight ticket:
+              Passport Size Photo:
               <input
                 className="hidden"
                 accept="image/*"
