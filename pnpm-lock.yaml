@@ -7,6 +7,12 @@ dependencies:
   '@nextui-org/react':
     specifier: 1.0.0-beta.12
     version: 1.0.0-beta.12(react-dom@18.2.0)(react@18.2.0)
+  '@paypal/checkout-server-sdk':
+    specifier: ^1.0.3
+    version: 1.0.3
+  '@paypal/react-paypal-js':
+    specifier: ^7.8.3
+    version: 7.8.3(react-dom@18.2.0)(react@18.2.0)
   '@prisma/client':
     specifier: ^4.13.0
     version: 4.13.0(prisma@4.13.0)
@@ -922,6 +928,42 @@ packages:
 
   /@panva/hkdf@1.1.1:
     resolution: {integrity: sha512-dhPeilub1NuIG0X5Kvhh9lH4iW3ZsHlnzwgwbOlgwQ2wG1IqFzsgHqmKPk3WzsdWAeaxKJxgM0+W433RmN45GA==}
+    dev: false
+
+  /@paypal/checkout-server-sdk@1.0.3:
+    resolution: {integrity: sha512-UEdq8akEdMz0Vs4qoQFU2gMp8PpyE/HKyMwiZuK4vIWUKl8jfd1fWKjQN5cDFm9NkFUIp5U7h++rdMOVj9WMNA==}
+    engines: {node: '>=8'}
+    dependencies:
+      '@paypal/paypalhttp': 1.0.1
+    dev: false
+
+  /@paypal/paypal-js@5.1.6:
+    resolution: {integrity: sha512-1upF06pv0AUtTftRVSra44p8ibqGa3ruKLArvdhpZla25zcrND7R+nDUIMrJ0iteVYZowhujZStFs6NoruExfg==}
+    dependencies:
+      promise-polyfill: 8.3.0
+    dev: false
+
+  /@paypal/paypalhttp@1.0.1:
+    resolution: {integrity: sha512-DC7AHxTT7drF6dUi3YaFdPVuT15sIkpD5H2eHmdtFgxM4UanS1o1ZDfMhR9mpxd8o+X6pz2r+EZVRRq+n1cssQ==}
+    engines: {node: '>=4'}
+    dev: false
+
+  /@paypal/react-paypal-js@7.8.3(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-7sD5JFA0IH9kysyGFv5DTmtPn54vLWZ0DLhdjUvsjqZnoEs11mJJJlTsTA7MkIO3jBAJOWlfoA4wLYzmy68C4g==}
+    peerDependencies:
+      react: '>=16.3.0'
+      react-dom: '>=16.3.0'
+    dependencies:
+      '@paypal/paypal-js': 5.1.6
+      '@paypal/sdk-constants': 1.0.130
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
+  /@paypal/sdk-constants@1.0.130:
+    resolution: {integrity: sha512-hrh1SyZy+qiBA+h/EYWjTZ7QiBcRgDiEfhHCxP47fiBO8wE9w+DiEfHm747vFQomvHg6AyDxhyGXjnuaGAW31A==}
+    dependencies:
+      hi-base32: 0.5.1
     dev: false
 
   /@pkgr/utils@2.3.1:
@@ -3114,6 +3156,10 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
+  /hi-base32@0.5.1:
+    resolution: {integrity: sha512-EmBBpvdYh/4XxsnUybsPag6VikPYnN30td+vQk+GI3qpahVEG9+gTkG0aXVxTjBqQ5T6ijbWIu77O+C5WFWsnA==}
+    dev: false
+
   /http-parser-js@0.5.8:
     resolution: {integrity: sha512-SGeBX54F94Wgu5RH3X5jsDtf4eHyRogWX1XGT3b4HuW3tQPM4AaBzoUji/4AAJNXCEOWZ5O0DgZmJw1947gD5Q==}
     dev: false
@@ -4082,6 +4128,10 @@ packages:
     requiresBuild: true
     dependencies:
       '@prisma/engines': 4.13.0
+
+  /promise-polyfill@8.3.0:
+    resolution: {integrity: sha512-H5oELycFml5yto/atYqmjyigJoAo3+OXwolYiH7OfQuYlAqhxNvTfiNMbV9hsC6Yp83yE5r2KTVmtrG6R9i6Pg==}
+    dev: false
 
   /prop-types@15.8.1:
     resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}
