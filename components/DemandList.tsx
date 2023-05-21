@@ -21,6 +21,7 @@ async function fetchData() {
   if (response.ok) {
     return data as Demand[];
   }
+  throw Error("Unable to fetch data");
 }
 const initialData = {
   loading: true,
