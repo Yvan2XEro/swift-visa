@@ -21,7 +21,7 @@ async function fetchData() {
   if (response.ok) {
     return data as Demand[];
   }
-  throw Error("Unable to fetch data");
+  throw Error(data);
 }
 const initialData = {
   loading: true,
@@ -55,6 +55,7 @@ export default function DemandList() {
       const data = await fetchData();
       dispacthDataAction({ type: "SET_DATA", payload: data });
     } catch (error) {
+      console.log("ERREUR DE NIBO!!!", error);
       dispacthDataAction({ type: "SET_ERROR", payload: error });
     } finally {
       dispacthDataAction({ type: "SET_LOADING", payload: false });
