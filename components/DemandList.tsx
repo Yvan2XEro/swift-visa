@@ -16,7 +16,7 @@ const actionModalState: ActionModalState = {
   element: <></>,
 };
 async function fetchData() {
-  const response = await fetch(`${process.env.HOST}/api/demands`);
+  const response = await fetch(`/api/demands`);
   const data = await response.json();
   if (response.ok) {
     return data as Demand[];

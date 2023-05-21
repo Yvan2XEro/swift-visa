@@ -7,7 +7,6 @@ const nextConfig = {
   },
   env: {
     APP_NAME: "Swift VISA",
-    HOST: "https://swift-visa.netlify.app",
     // DATABASE_URL: "mongodb+srv://tefoye:tefoye2022@cluster0.uwsolat.mongodb.net/Swift_Visa",
     // DATABASE_URL: "mongodb://admin:password@localhost:27017/sv",
     NOREPLY_EMAIL: "swift.visa237@gmail.com",
